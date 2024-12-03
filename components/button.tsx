@@ -2,11 +2,12 @@
 
 import { useFormStatus } from "react-dom";
 
-interface FormButtonProps {
+interface ButtonProps {
   text: string;
 }
 
-export default function FormButton({ text }: FormButtonProps) {
+export default function Button({ text }: ButtonProps) {
+  // form 처리 중일때 멈추게 해주는 용도 useFormStatus
   const { pending } = useFormStatus();
   return (
     <button
